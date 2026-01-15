@@ -61,4 +61,9 @@ export class Database {
       this.#persist();
     }
   }
+
+  deleteAll(table) {
+    this.#database[table] = [];
+    this.#persist();
+  }
 }

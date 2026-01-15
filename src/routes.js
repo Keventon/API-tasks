@@ -154,4 +154,13 @@ export const routes = [
       return response.writeHead(204).end();
     },
   },
+  {
+    method: "DELETE",
+    path: buildRoutePath("/tasks"),
+    handler: (request, response) => {
+      database.deleteAll("tasks");
+
+      return response.writeHead(204).end();
+    },
+  },
 ];
