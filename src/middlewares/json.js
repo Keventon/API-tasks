@@ -6,8 +6,10 @@ export async function json(request, response) {
     buffers.push(chunk);
   }
 
+  request.rawBody = Buffer.concat(buffers).toString();
+
   try {
-    request.body = JSON.parse(Buffer.concat(buffers).toString());
+    request.body = JSON.parse(request.rawBody);
   } catch {
     request.body = null;
   }

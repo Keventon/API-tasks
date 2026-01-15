@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "import:csv": "node src/utils/import-csv.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --watch src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "csv-parse": "^5.6.0"
+  }
 }
+
